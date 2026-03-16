@@ -1,34 +1,22 @@
+
 @font-face {
-  font-family: 'TT Lakes Regular';
-  src: url('TTLakes-Regular.eot');
-  src:
-    url('TTLakes-Regular.eot?#iefix') format('embedded-opentype'),
-    url('TTLakes-Regular.woff') format('woff'),
-    url('TTLakes-Regular.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'TTLakes';
+  src: url('../fonts/TTLakes-Regular.woff');
+}
+@font-face {
+  font-family: 'TTLakes';
+  src: url('../fonts/TTLakes-Medium.woff');
 }
 
 @font-face {
-  font-family: 'TT Lakes Medium';
-  src: url('TTLakes-Medium.eot');
-  src:
-    url('TTLakes-Medium.eot?#iefix') format('embedded-opentype'),
-    url('TTLakes-Medium.woff') format('woff'),
-    url('TTLakes-Medium.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+  font-family: 'TTLakes';
+  src: url('../fonts/TTLakes-Bold.woff');
 }
 
-@font-face {
-  font-family: 'TT Lakes Bold';
-  src: url('TTLakes-Bold.eot');
-  src:
-    url('TTLakes-Bold.eot?#iefix') format('embedded-opentype'),
-    url('TTLakes-Bold.woff') format('woff'),
-    url('TTLakes-Bold.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
+@mixin flex($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
 }
 
 * {
@@ -38,11 +26,7 @@
   font-family: 'TT Lakes', sans-serif;
 }
 
-@mixin flex($justify: center, $align: center) {
-  display: flex;
-  justify-content: $justify;
-  align-items: $align;
-}
+
 
 .modal {
   @include flex;
@@ -78,13 +62,12 @@
   border-left: 4px solid #41f6d7;
   height: 32px;
   color: #7e7e82;
-}
 
-&:hover {
-  transform: scale(1.1);
-  color: blue;
+  .modal__link:hover {
+    transform: scale(1.1);
+    color: blue;
+  }
 }
-
 .modal__menu {
   @include flex;
   flex-direction: column;
@@ -134,3 +117,56 @@
 
 /*header-section*/
 
+h1 {
+ display: flex;
+ justify-content: flex-start;
+ border-left: 3px solid #41f6d7;
+font-size: 28px;
+}
+.repair {
+  cursor: pointer;
+}
+.checkstatus {
+  cursor: pointer;
+}
+
+.service__menu {
+display: flex;
+flex-wrap: wrap;
+text-align: center;
+border-radius: 5px;
+border-color: #b8ffec;
+background-color: #ffffff;
+margin-right: 10px;
+padding: 10px 20px;
+transition: 0.3s;
+gap: 20px;
+list-style-type: none;
+cursor: pointer;
+}
+
+.hero{
+  display: flex;
+  flex-direction: column;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+.hero__container--img {
+  display: flex;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.expend {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+.expend:hover{
+  transform: rotate(180deg);
+}
