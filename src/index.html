@@ -8,6 +8,7 @@
     />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>web-core-9.6-2</title>
+
   </head>
   <body>
     //modal window section//
@@ -17,11 +18,6 @@
         <div class="modal__burger">
           <img src="img/burgerb.png" alt="" />
 
-          <div class="modal__toggle" id="mobile-menu">
-            <span class="bar"></span>
-            <span class="bar"></span>
-            <span class="bar"></span>
-          </div>
 
           <ul class="modal__menu">
             <li class="modal__item">
@@ -70,7 +66,7 @@
       <div class="modal__search">
         <img src="img/search.png" alt="" />
       </div>
-    </nav>
+   
 
     <div class="modal__footage">
       <div class="modal__footage--icons">
@@ -78,14 +74,15 @@
         <img src="img/chat.png" alt="" />
         <img src="img/profile.png" alt="" />
         <img src="img/divider.png" alt="" />
-      </div>
-
+      </div>  
       <div class="modal__footage--contacts">
         <span class="email">mail@cps.com</span><br />
         <span class="phone-number">8 800 890 8900</span><br />
         <span class="lang">RU EN CH</span>
       </div>
-    </div>
+ </nav>
+     </div>
+   
 
     //header section//
 
@@ -210,11 +207,17 @@
               <img src="img/go.png" alt="" />
             </div>
 
-            <span class="expand"
-              ><img src="img/expand.png" alt="" /> Показать все</span
-            >
-          </div>
+             <div class="swiper-pagination"></div>
+   
         </div>
+            <div class="show-all" id="toggleBtn">
+      <img class="icon" src="img/expand.png" alt="" />
+      <span class="text">Показать все</span>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+       
       </div>
 
       //repair devices section//
@@ -290,6 +293,7 @@
             </button>
           </div>
 
+          
           <div class="price__service"
             >Тестирование с выдачей технического заключения</div
           >

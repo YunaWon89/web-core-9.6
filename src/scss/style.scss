@@ -39,8 +39,9 @@
 
 .modal__container {
   @include flex;
-  gap: 128px;
+  gap: 80px;
   margin-top: 15px;
+  position: fixed;
 }
 
 .modal__burger {
@@ -170,3 +171,241 @@ h4 {
 .expend:hover{
   transform: rotate(180deg);
 }
+
+.icon {
+  transition: transform 0.3s ease;
+  margin-left: 20px;
+}
+
+.show-all.active .icon {
+  transform: rotate(180deg);
+}
+
+@media (min-width: 768px) {
+  .service__menu {
+display: inline-flex;
+flex-wrap: wrap;
+overflow-x: auto;
+overflow-y: hidden;
+font-size: 17px;
+  }
+
+  .hero__container--img {
+  height: auto;
+  display: block;
+  margin: 40px;
+  width: 208%;
+  }
+
+  .hero {
+     flex-direction: row;
+  }
+
+  .hero__container {
+    width: 50%;
+  }
+   h4 {
+    font-size: 20px;
+   }
+
+   .swiper__mySwiper {
+    height: 300px !important;
+   }
+   
+   .swiper__mySwiper--wrapper {
+    max-width: 768px;
+    display: flex !important;
+    flex-wrap: wrap;
+   }
+
+   .swiper__slide {
+    min-height: 224px;
+    max-width: 224px;
+   }
+
+   .expend {
+    display: flex;
+   }
+
+   .tablet {
+    display: block !important;
+   }
+   .tablet-none {
+    display: none !important;
+   }
+.swiper-pagination {
+  display: none !important;
+}
+}
+
+@media (min-width: 1120px) {
+  .swiper__mySwiper {
+    height: 300px !important;
+  }
+  .swiper__mySwiper--wrapper {
+    max-width: 1120px;
+    display: flex !important;
+    flex-wrap: wrap;
+  }
+
+  .swiper__slide {
+    min-width: 240px;
+    max-width: 240px;
+  }
+.show-all {
+    display: flex;
+  }
+  .pc {
+    display: block !important;
+  }
+  .pc-none {
+    display: none !important;
+  }
+  .swiper-pagination {
+    display: none !important;
+  }
+
+}
+
+.swiper__MySwiper {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.swiper__MySwiper--wrapper {
+  display: flex;
+  margin-top: 20px;
+  height: 130px !important;
+}
+
+span {
+  display: flex;
+  flex-direction: row;
+  font-size: 16px;
+  color: #7e7e82;
+  margin-left: 20px;
+  margin-top: 30px;
+  font-family: "TT Lakes regular", sans-serif;
+}
+
+.swiper__slide {
+  display: flex !important; 
+  justify-content: space-between;
+  align-items: center;
+  min-width: 240px; 
+  max-width: 240px; 
+  min-height: 72px; 
+  max-height: 72px; 
+  border: 1px solid lightgray;
+  margin: 10px;
+  padding: 16px; 
+  border-radius: 6px;
+  background-color: white;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  object-fit: contain;
+}
+
+.brand-icon {
+  max-height: 32px;
+  max-width: 128px;
+}
+
+.expend {
+  display: none;
+  align-items: center;
+  cursor: pointer;
+  margin-top: 30px;
+}
+
+.swiper__MySwiper {
+  padding: 20px;
+
+  &--wrapper {
+    display: flex;
+    gap: 16px;
+  }
+}
+
+.swiper__slides {
+  @include flex(space-between,center);
+width: 220px;
+height: 80px;
+padding: 16px;
+background-color: #fff;
+border-radius: 12px;
+border: 1px solid #eaeaea;
+}
+
+span {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.expanded {
+  @include flex;
+  gap: 8px;
+  margin-top: 16px;
+  cursor: pointer;
+
+  img {
+    width: 16px;
+  }
+  &hover {
+    color: red;
+  }
+}
+
+.price {
+  margin-top: 40px;
+  &__title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  &__table {
+    background-color: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+  }
+  &__row--header {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    padding: 16px;
+    background: #f8f8f8;
+    font-weight: bold;
+  }
+
+  &__service,
+  &__cost,
+  &__time,
+  &__action {
+    padding: 16px;
+    border-bottom: 1px solid #eee;
+  }
+
+  &__table > div:not(.price__row--header) {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+    align-items: center;
+  }
+}
+
+.price__button {
+  @include flex;
+  gap: 8px;
+
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: none;
+  background: #ff3e79;
+  color: white;
+  cursor: pointer;
+  &--arrow {
+    font-weight: bold;
+  }
+
+  &:hover {
+    background: #e6336b;
+  }
+}
+
