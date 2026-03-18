@@ -29,53 +29,163 @@
 
 
 .modal {
-  @include flex;
-  flex-direction: column;
-  width: 320px;
-  height: 1024px;
-  position: fixed;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.12);
+height: 100%;
+width: 320px;
+background-color: #fff;
+transition: 0.5s ease;
+transform: translateX(-320px);
+z-index: 10;
+position: fixed;
 }
 
+
 .modal__container {
+  padding: 24px;
+}
+ul li{
+  list-style: none;
+}
+
+
+ .modal__links{
+  color: #011a41;
+  font-weight: 500;
+  padding: 5px 0;
+  display: block;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+}
+
+ul li:hover a{
+  color: black;
+  background-color: #a8f3e6;
+}
+
+input {
+  display: none;
+  visibility: hidden;
+}
+
+.toggle{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 20px;
+  left: 15px;
+  z-index: 20;
+  background-color: #FF3E79;
+  cursor: pointer;
+  border-radius: 2px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.toggle .common {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50);
+  height: 2px;
+  width: 20px;
+  background-color: white;
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+
+.toggle .top__line {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.toggle .middle__line {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.toggle .bottom__line {
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+input:checked ~ .toggle .top__line {
+  left: 2px;
+  top: 14px;
+  width: 25px;
+  transform: rotate(45deg);
+}
+input:checked ~ .toggle .bottom__line {
+  left: 2px;
+  top: 14px;
+  width: 25px;
+  transform: rotate(-45deg);
+}
+
+input:checked ~ .toggle .middle__line {
+  opacity: 0;
+  transform: translateX(20px);
+}
+input:checked ~ .modal {
+transform: translateX(0);
+box-shadow: 0 0 15px rgba(0,0,0,0.5);
+}
+
+/*.modal__container {
   @include flex;
+  flex-direction: column;
+  height: 100%;
+  padding: 24px;
   gap: 80px;
   margin-top: 15px;
   position: fixed;
 }
+
+
 
 .modal__burger {
   @include flex;
   gap: 15px;
   margin-left: 10px;
   cursor: pointer;
-}
+  z-index: 1001;
+  
+
 
 .modal__search {
   @include flex;
   cursor: pointer;
 }
 
-.modal__link {
+.modal__links {
   @include flex;
-  box-sizing: border-box;
-  gap: 10px;
-  border-left: 4px solid #41f6d7;
   height: 32px;
-  color: #7e7e82;
+text-decoration: none;
+color: #1b1c21;
+padding-left: 20px;
+margin-left: -24px;
+border-left: 4px solid transparent;
+transition: all 0.3s ease;
 
-  .modal__link:hover {
-    transform: scale(1.1);
-    color: blue;
-  }
+&:first-child,
+&.modal__links--active {
+  border-left: 4px solid #41f6d7;
+  color: #7e7e82;
+}
+&:hover:not(:first-child) {
+  color: #7e7e82;
+}
 }
 .modal__menu {
   @include flex;
   flex-direction: column;
+  flex-grow: 1;
+  list-style: none;
   margin-top: 50px;
   gap: 30px;
   list-style: none;
-  padding: 15px;
+  padding: 0;
   font-size: 21px;
 }
 
@@ -114,7 +224,7 @@
 }
 .lang {
   font-size: 15px;
-}
+}}*/
 
 /*header-section*/
 
@@ -363,7 +473,7 @@ span {
     margin-bottom: 20px;
   }
   &__table {
-    background-color: #fff;
+    background-color: white;
     border-radius: 12px;
     overflow: hidden;
   }
@@ -391,21 +501,23 @@ span {
 }
 
 .price__button {
-  @include flex;
-  gap: 8px;
-
-  padding: 8px 16px;
+ @include flex;
   border-radius: 20px;
   border: none;
   background: #ff3e79;
-  color: white;
   cursor: pointer;
   &--arrow {
     font-weight: bold;
+    color: white;
+    font-size: 20px;
   }
 
   &:hover {
     background: #e6336b;
   }
+&--text {
+  color: white;
+  font-size: 20px;
+}
 }
 
