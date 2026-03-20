@@ -31,7 +31,6 @@ body{
   justify-content: flex-start;
   margin: 10px;
   padding: 0;
-  width: 100vw;
   font-family: 'TT Lakes Regular', sans-serif;
   font-size: 15px;
 }
@@ -85,15 +84,15 @@ input {
   display: flex;
    flex-direction: column;
   margin-top: 50px;
-}
 
-.modal__footage--icons{
+
+&--icons{
    display: flex;
     gap: 15px;
     margin: 10px;
     cursor: pointer;
 }
-
+}
 .contacts{
     padding: 10px;
 }
@@ -112,8 +111,17 @@ input {
     font-size: 15px;
 }
 
+.price__button--text {
+  margin: 7px;
+}
 
+.price__button--arrow {
+  margin: 2px;
+}
 
+.price__row--header{
+  background-color: white;
+}
 
 
 .toggle{
@@ -189,9 +197,18 @@ box-shadow: 0 0 15px rgba(0,0,0,0.5);
  align-items: flex-end;
  
 }
+
+.swiper__mySwiper--wrapper {
+   display: flex;
+  margin-top: 20px;
+  height: 130px !important;
+}
+
+
  .swiper__slides {
  @include flex;
 gap: 20px;
+font-size: 20px;
 }
 .swiper__MySwiper {
   display: flex;
@@ -199,8 +216,9 @@ gap: 20px;
   justify-content: space-evenly;
   width: 240px;
   height:160px;
+  }
 
-}
+
 
 h1 {
  display: flex;
@@ -260,6 +278,7 @@ h4 {
   transform: rotate(180deg);
 }
 
+
 .icon {
   transition: transform 0.3s ease;
   margin-left: 20px;
@@ -269,6 +288,46 @@ h4 {
 
 .show-all.active .icon {
   transform: rotate(180deg);
+}
+
+.price__table {
+  margin-top: 100x;
+}
+
+.price__title{
+  margin-left: 15px;
+  margin-top: 200px;
+}
+
+
+.commercial__offer {
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+gap: 5px;
+width: 630px;
+
+&--action {
+  display: flex;
+  align-items: center;
+}
+
+&--text {
+  font-size: 18px;
+  color: black;
+}
+
+&--arrow{
+   color: red;
+  cursor: pointer;
+  font-weight: bold;
+}
+}
+
+.footer {
+  display: flex;
+justify-content: space-between;
+margin-top: 120px;
 }
 
 @media (min-width: 768px) {
@@ -418,19 +477,21 @@ span {
 }
 
 .swiper__slides {
-  @include flex(space-between,center);
-width: 220px;
-height: 80px;
-padding: 16px;
+  @include flex(space-evenly,center);
+width: 240px;
+height: 160px;
 background-color: #fff;
 border-radius: 12px;
 border: 1px solid #eaeaea;
+gap: 10px;
 }
 
 span {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
+  color: black;
 }
+
 
 .expanded {
   @include flex;
