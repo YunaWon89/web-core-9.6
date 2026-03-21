@@ -2,7 +2,7 @@ import '../scss/style.scss'
 
 console.log('It works!')
 
-document.addEventListener("DOMContentLoaded", function () {
+/*document.addEventListener("DOMContentLoaded", function () {
   const toggleBtn = document.getElementById("toggleBtn");
   const text = toggleBtn.querySelector(".text");
  
@@ -174,3 +174,29 @@ document.addEventListener("DOMContentLoaded", function () {
   initSwiper();
   window.addEventListener("resize", initSwiper);
 });
+
+*/
+
+
+
+const openBtn = document.querySelector('.burger-open');
+const closeBtn = document.querySelector('.burger-toggle');
+const modal = document.querySelector('.modal');
+
+// открыть
+openBtn.addEventListener('click', () => {
+  modal.classList.add('active');
+});
+
+// закрыть
+closeBtn.addEventListener('click', () => {
+  modal.classList.remove('active');
+});
+
+
+  var swiper = new Swiper(".mySwiper", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+
