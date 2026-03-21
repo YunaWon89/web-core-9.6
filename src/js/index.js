@@ -2,7 +2,7 @@ import '../scss/style.scss'
 
 console.log('It works!')
 
-/*document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function () {
   const toggleBtn = document.getElementById("toggleBtn");
   const text = toggleBtn.querySelector(".text");
  
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("resize", initSwiper);
 });
 
-*/
+
 
 
 
