@@ -1,5 +1,6 @@
 import '../scss/style.scss'
-
+import Swiper from 'swiper';
+import {Pagination} from 'swiper/modules';
 console.log('It works!')
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -65,6 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
   function initSwiper() {
     if (window.innerWidth < 768 && swiper === null) {
       swiper = new Swiper(".mySwiper", {
+        modules: [Pagination],
         slidesPerView: 1.2,
         spaceBetween: 10,
         pagination: {
@@ -152,32 +154,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-document.addEventListener("DOMContentLoaded", function () {
-  let swiper = null;
-  function initSwiper() {
-    if (window.innerWidth < 768 && swiper === null) {
-      swiper = new Swiper(".mySwiper", {
-        slidesPerView: 1.2,
-        spaceBetween: 10,
-        pagination: {
-          el: ".swiper-pagination",
-          clickable: true,
-        },
-      });
-    }
-
-    if (window.innerWidth >= 768 && swiper !== null) {
-      swiper.destroy(true, true);
-      swiper = null;
-    }
-  }
-  initSwiper();
-  window.addEventListener("resize", initSwiper);
-});
-
-
-
-
 
 const openBtn = document.querySelector('.burger-open');
 const closeBtn = document.querySelector('.burger-toggle');
@@ -194,9 +170,4 @@ closeBtn.addEventListener('click', () => {
 });
 
 
-  var swiper = new Swiper(".mySwiper", {
-      pagination: {
-        el: ".swiper-pagination",
-      },
-    });
 
