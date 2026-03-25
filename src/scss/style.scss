@@ -1,4 +1,3 @@
-
 @font-face {
   font-family: 'TTLakes';
   src: url('../fonts/TTLakes-Regular.woff');
@@ -30,11 +29,22 @@
 body{
   display: flex;
   justify-content: flex-start;
-  margin: 10px;
+  margin: 0;
   padding: 0;
   font-family: 'TT Lakes Regular', sans-serif;
   font-size: 15px;
+}
 
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 
@@ -229,7 +239,7 @@ box-shadow: 0 0 15px rgba(0,0,0,0.5);
 
 .header__container {
   background-color: white;
-  margin: 10px;
+  margin: 0;
 }
 .header__icons--right {
  display: flex;
@@ -285,30 +295,84 @@ margin-left: 10px;
   object-fit: contain;
 }
 
-.swiper-wrapper2 {
-   display: flex;
-  margin-top: 20px;
-  height: 130px !important;
+.mySwiper2{
+  padding-bottom: 0px;
+
 }
 
 
- .swiper-slide2 {
-  display: flex !important; 
-  justify-content: space-between;
-  align-items: center;
-  min-width: 240px; 
-  max-width: 240px; 
-  min-height: 160px; 
-  max-height: 160px; 
-  border: 1px solid lightgray;
-  margin: 10px;
-  margin-right: 30px;
-  padding: 16px; 
-  border-radius: 6px;
-  background-color: white;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  object-fit: contain;
+.mySwiper2{
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-width: 240px;
+    max-width: 240px;
+    min-height: 160px;
+    max-height: 160px;  
+    padding: 16px;
+  }
 
+.swiper-slide span {
+  align-self: flex-start;
+}
+.swiper-slide .push {
+  align-self: flex-end;
+}
+
+.swiper-pagination-2{
+ position: static;
+ margin-top: 80px;
+}
+.swiper-wrapper{
+  margin-bottom: 20px;
+}
+}
+
+
+.mySwiper3 {
+  .swiper-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    min-width: 240px;
+    max-width: 240px;
+    min-height: 200px;
+    max-height: 200px;  
+    padding: 10px;
+  
+  }
+  
+  .swiper-slide span {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-start;
+  padding: 0;
+  margin: 0;
+  
+}
+.swiper-slide p {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-self: flex-start;
+  background: white;
+}
+
+.btn{
+  display: flex;
+  justify-content: flex-end;
+  align-self: flex-end;
+background-color: #FF3E79;
+color: white;
+border-radius: 16px;
+border: 1px;
+padding: 8px 16px;
+font-size: 12px;
+}
 }
 
 .brand-icon {
@@ -324,6 +388,10 @@ margin-left: 10px;
   margin-top: 30px;
 }
 
+
+.show-all2 {
+  display: none;
+}
 .show-all.active .icon {
   transform: rotate(180deg);
 }
@@ -332,12 +400,39 @@ margin-left: 10px;
 
 
 .swiper {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 240px;
-  height:160px;
-  }
+  width: 100%;
+  overflow: hidden;
+}
+
+.header,
+.header__container,
+.hero,
+.hero__container,
+.service,
+.commercial__offer,
+.footer,
+.swiper,
+.mySwiper,
+.mySwiper2,
+.mySwiper3 {
+  width: 100%;
+  max-width: 100%;
+}
+
+.header__container {
+  margin: 0;
+}
+
+.commercial__offer {
+  width: 100%;
+}
+
+.mySwiper,
+.mySwiper2,
+.mySwiper3 {
+  margin-left: 0;
+  margin-right: 0;
+}
 
 .swiper-pagination-bullet {
 background: gray;
@@ -347,6 +442,13 @@ opacity: 1;
  .swiper-pagination-bullet-active {
   background: lightblue;
  }
+
+.swiper-pagination-2 {
+  text-align: center;
+}
+
+
+
 h1 {
  display: flex;
  justify-content: flex-start;
@@ -459,8 +561,18 @@ span {
   transform: rotate(180deg);
 }
 
-.price {
-  display: none;
+.price__table {
+  display: none; }
+.price__title {
+    display: none;
+}
+.price__title2 {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 10px;
+  font-weight: 400;
+  color: #7E7E82;
+  font-size: 24px;
 }
 
 .commercial__offer {
@@ -468,7 +580,7 @@ display: flex;
 flex-direction: column;
 align-items: flex-start;
 gap: 5px;
-width: 630px;
+width: 100%;
 
 &--action {
   display: flex;
@@ -493,11 +605,25 @@ width: 630px;
 
 .footer {
   display: flex;
-justify-content: space-between;
-margin-top: 120px;
+  flex-direction: column;
+justify-content: center;
+align-items: center;
+margin-top: 50px;
 }
 
 @media (min-width: 768px) {
+  body {
+    margin: 10px;
+  }
+
+  .header__container {
+    margin: 10px;
+  }
+
+  .commercial__offer {
+    width: 630px;
+  }
+
   .service__menu {
 display: flex;
 flex-wrap: nowrap;
@@ -632,18 +758,6 @@ body {
 
 }
 
-.swiper {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-}
-
-.swiper-wrapper {
-  display: flex;
-  margin-top: 20px;
-  height: 130px !important;
-}
-
 span {
   display: flex;
   flex-direction: row;
@@ -684,12 +798,7 @@ span {
 }
 
 .swiper {
-  padding: 20px;
-
-  &-wrapper {
-    display: flex;
-    gap: 16px;
-  }
+  padding: 20px 0 40px;
 }
 
 .swiper-slide2 {
@@ -782,3 +891,55 @@ span {
 }
 }
 
+/* Brands block: slider on mobile, grid on tablet/desktop */
+@media (min-width: 768px) and (max-width: 1119px) {
+  .mySwiper {
+    overflow: visible;
+  }
+
+  .mySwiper .swiper-wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(3, 224px);
+    gap: 16px;
+    height: auto !important;
+    margin-top: 20px;
+    justify-content: flex-start;
+  }
+
+  .mySwiper .swiper-slide {
+    width: 224px !important;
+    min-width: 224px;
+    max-width: 224px;
+    margin: 0;
+  }
+
+  .mySwiper .swiper-pagination {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1120px) {
+  .mySwiper {
+    overflow: visible;
+  }
+
+  .mySwiper .swiper-wrapper {
+    display: grid !important;
+    grid-template-columns: repeat(4, 240px);
+    gap: 16px;
+    height: auto !important;
+    margin-top: 20px;
+    justify-content: flex-start;
+  }
+
+  .mySwiper .swiper-slide {
+    width: 240px !important;
+    min-width: 240px;
+    max-width: 240px;
+    margin: 0;
+  }
+
+  .mySwiper .swiper-pagination {
+    display: none !important;
+  }
+}
