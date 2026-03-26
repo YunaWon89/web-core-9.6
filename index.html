@@ -68,13 +68,17 @@
         <img src="img/phone.png" alt="">
         <img src="img/chat.png" alt="">
         <img src="img/profile.png" alt="">
-        <img src="img/divider.png" alt="">
+        <img class="modal-divider" src="img/divider.png" alt="">
       </div>  
       <div class="modal__footage--contacts">
-        <span class="email">mail@cps.com</span><br>
+        <span class="email">mail@cps.com</span>
         <span class="phone-number">8 800 890 8900</span><br>
-        <span class="lang">RU EN CH</span>
       </div>
+      <div class="lang">
+      <span>RU </span>
+    <span>EN</span>
+    <span>CH</span>
+  </div>
     </div>
   </nav>
    
@@ -86,18 +90,21 @@
        <img class="burger-open" src="img/burgerb.png" alt="">
        <img class="divider768" src="img/divider.png" alt="">
        <img src="img/Group.png" alt="">
-       <img class="divider320" src="img/divider.png" alt=""> </div>
 
-           <div class="header__icons--right">
-            <img class="hidden768" src="img/phone.png" alt="">
+<div class="header__icons--right">
+  <img class="hidden768" src="img/phone.png" alt="">
             <img class="hidden768" src="img/chat.png" alt="">
             <img class="hidden768" src="img/profile.png" alt="">
             <img class="hidden768" src="img/divider.png" alt="">
-              <span class="request">Оставить заявку</span>
+       
+<div class="request-repair">
+        <span class="request">Оставить заявку</span>
               <img class="request-pic" src="img/repair.png" alt="">
               <span class="repair">Статус ремонта</span>
               <img class="repair-pic" src="img/checkstatus.png" alt="">
-        </div>
+      </div>
+      </div>
+</div>
 
         <div class="header__container--text">
           <h1>Услуги и сервисы</h1> 
@@ -144,7 +151,7 @@
 
 
 
-      <span>РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ
+      <span class="swiper-span">РЕМОНТ ТЕХНИКИ РАЗЛИЧНЫХ БРЕНДОВ
 </span>
        <div class="swiper mySwiper">
       <div class="swiper-wrapper">
@@ -206,18 +213,19 @@
       </div>
 
       <div class="swiper-pagination"></div>
-
+  <div class="show-all">
+      <img class="icon" src="img/expand.png" alt="">
+      <span class="text">Показать все</span>
+    </div>
     </div>
 
 
-    <div class="show-all" id="toggleBtn">
-      <img class="icon" src="img/expand.png" alt="">Показать все
-    
-    </div>
+  
 
  <br>
 
-      <span>Ремонт различных видов техники</span>
+      <span class="swiper2-repair">РЕМОНТ РАЗЛИЧНЫХ ВИДОВ ТЕХНИКИ
+</span>
       <div class="swiper mySwiper2">
         <div class="swiper-wrapper">
           <div class="swiper-slide type-2">
@@ -267,12 +275,15 @@
 
         </div>
         <div class="swiper-pagination-2"></div>
-      </div>
- 
-    <div class="show-all2" id="toggleBtn">
-      <img class="icon" src="img/expand.png" alt="">Показать все
+ <div class="show-all">
+      <img class="icon" src="img/expand.png" alt="">
+      <span class="text">Показать все</span>
     </div>
 
+
+      </div>
+ 
+   
 
 <h2 class="price__title2">ЦЕНЫ НА УСЛУГИ
 </h2>
@@ -328,45 +339,36 @@
 </div>
 
 
-
-    <section class="price">
-      <h2 class="price__title">ЦЕНЫ НА УСЛУГИ
+   <h2 class="price__title">ЦЕНЫ НА УСЛУГИ
 </h2>
+    <section class="price">
       <div class="price__table">
         <div class="price__row--header">
-          <div class="price__service">Ремонтные услуги</div>
-          <div class="price__cost">Цена</div>
-          <div class="price__time">Срок</div>
-          <div class="price__action"></div>
+          <div class="price__service1">Ремонтные услуги</div>
+          <div class="price__cost1">Цена</div>
+          <div class="price__time1">Срок</div>
+          <div class="price__action">
+          </div>
 
           <div class="price__service">Диагностика</div>
           <div class="price__cost">Бесплатно</div>
           <div class="price__time">30 мин</div>
           <div class="price__action">
-            <button class="price__button">
-              <span class="price__button--text">Заказать</span>
-              <span class="price__button--arrow">></span>
-            </button>
+            <button class="btn">ЗАКАЗАТЬ  ></button>
           </div>
 
           <div class="price__service">Замена дисплея</div>
           <div class="price__cost">1 000 ₽</div>
           <div class="price__time">30-120 мин</div>
           <div class="price__action">
-            <button class="price__button">
-              <span class="price__button--text">Заказать</span>
-              <span class="price__button--arrow">></span>
-            </button>
+            <button class="btn">ЗАКАЗАТЬ  ></button>
           </div>
 
           <div class="price__service">Замена полифонического динамика</div>
           <div class="price__cost">1 000 ₽</div>
           <div class="price__time">30-120 мин</div>
           <div class="price__action">
-            <button class="price__button">
-              <span class="price__button--text">Заказать</span>
-              <span class="price__button--arrow">></span>
-            </button>
+           <button class="btn">ЗАКАЗАТЬ  ></button>
           </div>
 
           
@@ -374,20 +376,14 @@
           <div class="price__cost">1 000 ₽</div>
           <div class="price__time">30-120 мин</div>
           <div class="price__action">
-            <button class="price__button">
-              <span class="price__button--text">Заказать</span>
-              <span class="price__button--arrow">></span>
-            </button>
+          <button class="btn">ЗАКАЗАТЬ  ></button>
           </div>
 
           <div class="price__service">Замена программного обеспечения</div>
           <div class="price__cost">1 000 ₽</div>
           <div class="price__time">30-120 мин</div>
           <div class="price__action">
-            <button class="price__button">
-              <span class="price__button--text">Заказать</span>
-              <span class="price__button--arrow">></span>
-            </button>
+           <button class="btn">ЗАКАЗАТЬ  ></button>
           </div>
         </div>
       </div>
@@ -405,14 +401,14 @@
 
     <div class="footer">
       <div class="footer__company">© 2019 CPS Разработано командой Apesong
-      </div>
+      </div><br>
 
-      <div class="footer__company--policy"> Политика конфиденциальности </div>
+      <div class="footer__company--policy"> Политика конфиденциальности </div><br>
 
       <div class="footer__company--nonpublic">
         Информация, размещенная на данной странице, не является публичной
         офертой
-      </div>
+      </div><br>
     </div>
   </div></div></body>
 </html>
