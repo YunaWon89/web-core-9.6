@@ -3,7 +3,7 @@ import Swiper from 'swiper'
 import { Pagination } from 'swiper/modules'
 console.log('It works!')
 
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
   const toggleBtn = document.getElementById('toggleBtn')
   const text = toggleBtn.querySelector('.text')
 
@@ -57,6 +57,25 @@ document.addEventListener('DOMContentLoaded', function () {
     setHidden(hidden)
   })
 })
+*/
+
+/*document.querySelectorAll('.expand').forEach((btn) => {
+  btn.addEventListener('click', () => {
+    const text = btn.previousElementSibling;
+    const arrow = btn.querySelector('.arrow');
+
+    text.classList.toggle('active');
+
+    if (text.classList.contains('active')) {
+      btn.lastChild.textContent = ' Скрыть';
+      arrow.classList.add('rotate');
+    } else {
+      btn.lastChild.textContent = ' Показать все';
+      arrow.classList.remove('rotate');
+    }
+  });
+});*/
+
 
 // document.addEventListener("DOMContentLoaded", function () {
 //   let swiper = null;
@@ -106,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
   window.addEventListener('resize', initSwiper)
 })
 
-document.addEventListener('DOMContentLoaded', function () {
+/*document.addEventListener('DOMContentLoaded', function () {
   const toggleBtn = document.getElementById('toggleBtn')
   const text = toggleBtn.querySelector('.text')
   // берём элементы и с tablet, и с tablet-none, чтобы всё работало с текущей разметкой
@@ -163,7 +182,7 @@ document.addEventListener('DOMContentLoaded', function () {
     hidden = !hidden
     setHidden(hidden)
   })
-})
+})*/
 
 const openBtn = document.querySelector('.burger-open')
 const closeBtn = document.querySelector('.burger-toggle')
@@ -212,24 +231,40 @@ window.addEventListener('resize', initSwiper2);
 let swiper3 = null;
 
 function initSwiper3() {
-    // Проверяем ширину экрана (как в твоем первом примере)
+    
     if (window.innerWidth < 768 && swiper3 === null) {
-        swiper3 = new Swiper('.mySwiper3', { // Класс из твоего HTML
+        swiper3 = new Swiper('.mySwiper3', { 
             modules: [Pagination],
             slidesPerView: 'auto',
             spaceBetween: 10,
             pagination: {
-                // Ищем пагинацию именно внутри mySwiper2, чтобы не было конфликтов
+                
                 el: '.mySwiper3 .swiper-pagination-3',
                 clickable: true,
             },
         });
     } else if (window.innerWidth >= 768 && swiper3 !== null) {
-        // Удаляем слайдер на больших экранах
+      
         swiper3.destroy(true, true);
         swiper3 = null;
     }
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const swiper3 = new Swiper('.mySwiper3', {
+    modules: [Pagination],
+
+    slidesPerView: 1.2,
+    spaceBetween: 10,
+
+    pagination: {
+      el: '.swiper-pagination-3',
+      clickable: true,
+    },
+  });
+});
+
 
 
 
@@ -258,29 +293,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-  const toggleBtn = document.querySelector(".show-all");
-  const text = toggleBtn.querySelector(".text");
-  const hiddenSlides = document.querySelectorAll(".tablet-none, .pc-none");
+    const expandBtn = document.querySelector(".expand");
+    const secondText = document.querySelector(".second");
+    const btnText = document.querySelector(".expand__text");
+    const btnIcon = document.querySelector(".push");
 
-  let hidden = true;
-
-  function setHidden() {
-    hiddenSlides.forEach(el => {
-      if (hidden) {
-        el.style.display = "none";
-      } else {
-        el.style.display = "flex";
-      }
-    });
-
-    text.textContent = hidden ? "Показать все" : "Скрыть";
-  }
-
-  setHidden();
-
-  toggleBtn.addEventListener("click", () => {
-    hidden = !hidden;
-    setHidden();
-  });
+    if (expandBtn && secondText) {
+        expandBtn.addEventListener("click", function () {
+           
+            // Если текст скрыт — показываем, если виден — скрываем
+            if (secondText.style.display === "none" || secondText.style.display === "") {
+                secondText.style.display = "block"; // Показываем
+                if (btnText) btnText.textContent = "Скрыть"; // Меняем текст
+                if (btnIcon) btnIcon.style.transform = "rotate(180deg)"; // Крутим иконку
+            } else {
+                secondText.style.display = "none"; // Скрываем
+                if (btnText) btnText.textContent = "Читать далее"; // Возвращаем текст
+                if (btnIcon) btnIcon.style.transform = "rotate(0deg)"; // Возвращаем иконку
+            }
+        });
+    } else {
+        console.log("Кнопка или текст не найдены! Проверь классы в HTML.");
+    }
 });
-
