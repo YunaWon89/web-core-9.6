@@ -351,6 +351,8 @@ margin-left: 10px;
   object-fit: contain;
 }
 
+
+
 .swiper-span {
   color: #7E7E82;
   font-size: 16px;
@@ -776,6 +778,31 @@ font-size: 17px;
   cursor: pointer;
   margin-top: 30px;
 }
+
+
+
+.swiper-slide {
+  &.is-hidden {
+@media (min-width: 768px) {
+  display: none !important ;
+}
+       @media (max-width: 767px) {
+  display: flex !important;
+}
+}
+     
+&.is-visible {
+  display: flex !important;
+}
+  }
+
+.icon{
+  transition: transform 0.3 ease;
+  &--rotate {
+    transform: rotate(180deg);
+  }
+}
+
 
 .show-all.active .icon {
   transform: rotate(180deg);
