@@ -1004,6 +1004,7 @@ body {
 
 .request-repair {
   display: flex;
+  justify-content: flex-end;
 }
 .request {
   display: flex;
@@ -1011,6 +1012,14 @@ body {
 
 .repair {
   display: flex;
+}
+
+.separate__icons {
+  display: none;
+}
+
+.header__icons {
+  display: none;
 }
 
   .swiper-mySwiper {
