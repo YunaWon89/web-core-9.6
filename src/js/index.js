@@ -350,3 +350,37 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 });
+
+
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const showAllBtn = document.querySelector(".show-all2");
+    const btnText = showAllBtn?.querySelector(".text");
+    const btnIcon = showAllBtn?.querySelector(".icon");
+    // Находим все слайдеры, которые помечены как скрытые
+    const hiddenSlides = document.querySelectorAll(".swiper-slide.is-hidden");
+
+    if (showAllBtn && hiddenSlides.length > 0) {
+        let isExpanded = false;
+
+        showAllBtn.addEventListener("click", function () {
+            isExpanded = !isExpanded;
+
+            hiddenSlides.forEach(slide => {
+                // Переключаем специальный класс видимости
+                slide.classList.toggle("is-visible", isExpanded);
+            });
+
+            // Меняем текст
+            if (btnText) {
+                btnText.textContent = isExpanded ? "Скрыть" : "Показать все";
+            }
+
+            // Поворачиваем иконку
+            if (btnIcon) {
+                btnIcon.classList.toggle("icon--rotate", isExpanded);
+            }
+        });
+    }
+});

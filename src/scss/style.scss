@@ -196,6 +196,7 @@ span {
 
 .price__row--header{
   background-color: white;
+  margin-left: 10px
 }
 
 
@@ -363,7 +364,7 @@ margin-left: 10px;
 
 .mySwiper2{
   padding-bottom: 0px;
-
+height: auto;
 }
 
 .swiper2-repair {
@@ -395,6 +396,7 @@ margin-left: 10px;
 }
 .swiper-slide .push {
   align-self: flex-end;
+  margin-top: 50px;
 }
 
 .swiper-pagination-2{
@@ -812,7 +814,7 @@ font-size: 17px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin-top: 90px;
+  margin-top: 5px;
   cursor: pointer;
 }
 
@@ -892,6 +894,7 @@ width: 50%;
 }
 .price__table {
   display: flex;
+  margin-left: 10px;
  
 }
 .price__row--header {
@@ -997,9 +1000,9 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit,250px);
   position: static;
-  transform: none;
+  transform: none !important;
   gap: 15px;
-  height: auto;
+  height: auto !important;
 }
 
 
@@ -1007,10 +1010,13 @@ body {
   max-width: 70%;
   margin: 0;
   height: auto !important;
-  overflow: visible; }
+  overflow: visible; 
+margin-bottom: 20px;
+}
 
 .show-all {
     display: flex;
+   
   }
   .pc {
     display: block !important;
