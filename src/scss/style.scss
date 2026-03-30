@@ -1044,6 +1044,24 @@ body {
   justify-content: flex-end;
   align-items: center;
 }
+.header__container--text {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 32px;
+}
+
+.header__container--text h1 {
+  margin: 0;
+}
+
+.request2, .repair2 {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
 
 .header__icons {
   display: none;
