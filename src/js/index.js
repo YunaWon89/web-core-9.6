@@ -324,10 +324,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const showAllBtn = document.querySelector(".show-all");
     const btnText = showAllBtn?.querySelector(".text");
     const btnIcon = showAllBtn?.querySelector(".icon");
-    // Находим все слайдеры, которые помечены как скрытые
-    const hiddenSlides = document.querySelectorAll(".swiper-slide.is-hidden");
+    const hiddenSlides = document.querySelector(".mySwiper")?.querySelectorAll(".swiper-slide.is-hidden");
 
-    if (showAllBtn && hiddenSlides.length > 0) {
+    if (showAllBtn && hiddenSlides?.length > 0) {
         let isExpanded = false;
 
         showAllBtn.addEventListener("click", function () {
@@ -358,10 +357,9 @@ document.addEventListener("DOMContentLoaded", function () {
     const showAllBtn = document.querySelector(".show-all2");
     const btnText = showAllBtn?.querySelector(".text");
     const btnIcon = showAllBtn?.querySelector(".icon");
-    // Находим все слайдеры, которые помечены как скрытые
-    const hiddenSlides = document.querySelectorAll(".swiper-slide.is-hidden");
+    const hiddenSlides = document.querySelector(".mySwiper2")?.querySelectorAll(".swiper-slide.is-hidden");
 
-    if (showAllBtn && hiddenSlides.length > 0) {
+    if (showAllBtn && hiddenSlides?.length > 0) {
         let isExpanded = false;
 
         showAllBtn.addEventListener("click", function () {
