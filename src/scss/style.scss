@@ -1011,20 +1011,29 @@ body {
   height: 891px;
 }
 
-.request-repair {
-  display: flex;
-  justify-content: flex-end;
-}
-.request {
-  display: flex;
-}
 
-.repair {
-  display: flex;
-}
 
 .separate__icons {
   display: none;
+}
+.request-repair {
+  display: none;
+}
+
+.burger-open {
+  display: none;
+}
+
+.dg1 {
+  display: none;
+}
+.Group {
+  display: none;
+}
+.request-repair2 {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .header__icons {
